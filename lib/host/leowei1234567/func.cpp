@@ -54,6 +54,7 @@ Expect<void> HostFuncExamplePrint::body([
     [maybe_unused]] Runtime::Instance::MemoryInstance *MemInst) {
   std::cout << "Class ID: " << Env.ClassID << std::endl;
   std::cout << "Class Name: " << Env.ClassName << std::endl;
+  std::cout << "Class Level: " << Env.ClassLevel << std::endl;
   for (auto &Student : Env.Students) {
     std::cout << "Student: " << Student << std::endl;
   }
