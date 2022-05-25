@@ -44,6 +44,12 @@ HostFuncExampleSetClassName::body(Runtime::Instance::MemoryInstance *MemInst,
   return {};
 }
 
+Expect<void> HostFuncExampleSetClassLevel::body(
+    [[maybe_unused]] Runtime::Instance::MemoryInstance *MemInst, uint32_t CLevel) {
+  Env.ClassLevel = CLevel;
+  return {};
+}
+
 Expect<void> HostFuncExamplePrint::body([
     [maybe_unused]] Runtime::Instance::MemoryInstance *MemInst) {
   std::cout << "Class ID: " << Env.ClassID << std::endl;

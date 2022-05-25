@@ -18,6 +18,7 @@ public:
 
   /// Variables
   uint32_t ClassID;
+  uint32_t ClassLevel;
   std::string ClassName;
   std::vector<std::string> Students;
 

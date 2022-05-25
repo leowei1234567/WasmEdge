@@ -16,6 +16,8 @@ HostFuncExampleModule::HostFuncExampleModule():Runtime::Instance::ModuleInstance
               std::make_unique<HostFuncExampleAddStudent>(Env));
   addHostFunc("host_function_example_set_class_name",
               std::make_unique<HostFuncExampleSetClassName>(Env));
+  addHostFunc("host_function_example_set_class_level",
+              std::make_unique<HostFuncExampleSetClassLevel>(Env));
   addHostFunc("host_function_example_print",
               std::make_unique<HostFuncExamplePrint>(Env));
 }

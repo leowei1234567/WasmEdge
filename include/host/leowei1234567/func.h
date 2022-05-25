@@ -35,6 +35,14 @@ public:
                     uint32_t ClassNamePtr, uint32_t ClassNameLen);
 };
 
+class HostFuncExampleSetClassLevel
+    : public HostFuncExample<HostFuncExampleSetClassLevel> {
+public:
+  HostFuncExampleSetClassLevel(HostFuncExampleEnvironment &HostEnv)
+    : HostFuncExample(HostEnv) {}
+  Expect<void> body(Runtime::Instance::MemoryInstance *MemInst, uint32_t CLevel);
+};
+
 class HostFuncExamplePrint : public HostFuncExample<HostFuncExamplePrint> {
 public:
   HostFuncExamplePrint(HostFuncExampleEnvironment &HostEnv)
